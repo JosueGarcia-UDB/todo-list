@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="colorPrimary">#66BB6A</color> <!-- Verde principal -->
+    <color name="colorPrimaryDark">#388E3C</color> <!-- Verde más oscuro -->
+    <color name="colorAccent">#FFC107</color> <!-- Amarillo/Naranja para acentos -->
+
+    <color name="taskTitleColor">#000000</color>
+    <color name="taskCategoryColor">#888888</color>
+    <color name="taskDeleteColor">#FF6666</color>
+
+    <color name="importanceYellow">#FFC107</color> <!-- Algo importante -->
+    <color name="importanceRed">#F44336</color>    <!-- Importante -->
+    <color name="importanceGray">#9E9E9E</color>    <!-- No importante -->
+
+    <color name="backgroundLightGray">#F0F0F0</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
 </resources>

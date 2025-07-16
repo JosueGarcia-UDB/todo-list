@@ -1,3 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">TodoList</string>
+    <string name="app_name">Mi Lista de Tareas</string>
+    <string name="title_text">Lista de Tareas</string>
+    <string name="add_task_hint">Añadir nueva tarea...</string>
+    <string name="add_task_description">Añadir Tarea</string>
+    <string name="delete_task_description">Eliminar Tarea</string>
+
+    <string-array name="categories_array">
+        <item>Educación</item>
+        <item>Compras</item>
+        <item>Trabajo</item>
+        <item>Personal</item>
+        <item>Salud</item>
+        <item>Otro</item>
+    </string-array>
+
+    <string-array name="importance_array">
+        <item>No importante</item>
+        <item>Algo importante</item>
+        <item>Importante</item>
+    </string-array>
 </resources>
