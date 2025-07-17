@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <EditText
+        android:id="@+id/editTaskNameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nombre de la tarea"/>
+
+    <Spinner
+        android:id="@+id/editCategorySpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"/>
+
+    <Spinner
+        android:id="@+id/editImportanceSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"/>
+
+    <EditText
+        android:id="@+id/editDueDateEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Fecha de vencimiento (dd/MM/yyyy)"
+        android:focusable="false"
+        android:layout_marginTop="12dp"/>
+
+</LinearLayout> 

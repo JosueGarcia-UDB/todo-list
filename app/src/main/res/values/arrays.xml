@@ -5,4 +5,12 @@
         <item>@color/importanceYellow</item>
         <item>@color/importanceRed</item>
     </array>
+    <array name="categories_array">
+        <item>Todas</item>
+        <item>Compras</item>
+        <item>Educación</item>
+        <item>Salud</item>
+        <item>Trabajo</item>
+        <item>Personal</item>
+    </array>
 </resources>
