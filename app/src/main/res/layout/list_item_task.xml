@@ -30,6 +30,7 @@
             android:textSize="18sp"
             android:textStyle="bold"
             android:maxLines="3"
+            android:textColor="@color/black"
             android:ellipsize="end"
             android:breakStrategy="high_quality">
 
@@ -41,7 +42,16 @@
             android:layout_height="wrap_content"
             android:textSize="14sp"
             android:maxLines="2"
+            android:textColor="@color/importanceGray"
             android:ellipsize="end" />
+
+        <TextView
+            android:id="@+id/taskDueDateTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="@color/importanceGray"
+            android:layout_marginTop="4dp" />
     </LinearLayout>
 
     <LinearLayout

@@ -15,6 +15,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AlertDialog
 import android.app.DatePickerDialog
+import androidx.activity.enableEdgeToEdge
 import java.util.Calendar
 
 class MainActivity : AppCompatActivity(), TaskAdapter.OnTaskDeleteListener {
@@ -25,6 +26,8 @@ class MainActivity : AppCompatActivity(), TaskAdapter.OnTaskDeleteListener {
     private lateinit var importanceSpinner: Spinner
     private lateinit var addTaskButton: ImageButton
     private lateinit var filterCategorySpinner: Spinner
+    private lateinit var addDueDateButton: ImageButton
+    private var dueDate: String? = null
 
     private val tasks = mutableListOf<Task>()
     private lateinit var adapter: TaskAdapter
@@ -33,6 +36,7 @@ class MainActivity : AppCompatActivity(), TaskAdapter.OnTaskDeleteListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        enableEdgeToEdge()
 
         tasksListView = findViewById(R.id.tasksListView)
         newTaskEditText = findViewById(R.id.newTaskEditText)
@@ -40,6 +44,7 @@ class MainActivity : AppCompatActivity(), TaskAdapter.OnTaskDeleteListener {
         importanceSpinner = findViewById(R.id.importanceSpinner)
         addTaskButton = findViewById(R.id.addTaskButton)
         filterCategorySpinner = findViewById(R.id.filterCategorySpinner)
+        addDueDateButton = findViewById(R.id.addDueDateButton)
 
         dbHelper = TaskDbHelper(this)
         loadTasksFromDb()
@@ -55,6 +60,10 @@ class MainActivity : AppCompatActivity(), TaskAdapter.OnTaskDeleteListener {
         // Configurar el listener del botón para agregar tareas
         addTaskButton.setOnClickListener {
             addTask()
+        }
+
+        addDueDateButton.setOnClickListener {
+            showDatePickerDialog()
         }
     }
 
@@ -127,11 +136,12 @@ class MainActivity : AppCompatActivity(), TaskAdapter.OnTaskDeleteListener {
         val importance = importanceSpinner.selectedItem.toString()
 
         if (taskName.isNotEmpty()) {
-            val newTask = Task(taskName, category, importance)
+            val newTask = Task(taskName, category, importance, false, dueDate)
             dbHelper.insertTask(newTask)
             tasks.add(newTask)
             adapter.notifyDataSetChanged()
             newTaskEditText.text.clear()
+            dueDate = null // Reiniciar la fecha de vencimiento
             Toast.makeText(this, "Tarea agregada", Toast.LENGTH_SHORT).show()
         } else {
             Toast.makeText(this, "Por favor, ingrese una tarea", Toast.LENGTH_SHORT).show()
@@ -236,5 +246,20 @@ class MainActivity : AppCompatActivity(), TaskAdapter.OnTaskDeleteListener {
             }
             .setNegativeButton("Cancelar", null)
             .show()
+    }
+
+    private fun showDatePickerDialog() {
+        val calendar = Calendar.getInstance()
+        val datePicker = DatePickerDialog(
+            this,
+            { _, year, month, dayOfMonth ->
+                dueDate = String.format("%02d/%02d/%04d", dayOfMonth, month + 1, year)
+                Toast.makeText(this, "Fecha de finalización: $dueDate", Toast.LENGTH_SHORT).show()
+            },
+            calendar.get(Calendar.YEAR),
+            calendar.get(Calendar.MONTH),
+            calendar.get(Calendar.DAY_OF_MONTH)
+        )
+        datePicker.show()
     }
 }

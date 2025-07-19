@@ -1,106 +1,126 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="#F0F0F0"
+    android:fillViewport="true"
     tools:context=".MainActivity">
 
-    <!-- Barra Superior con el título -->
-    <TextView
-        android:id="@+id/titleTextView"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:background="#66BB6A"
-        android:text="Lista de Tareas"
-        android:textColor="@android:color/white"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:gravity="center"
-        android:paddingTop="8dp"
-        android:paddingBottom="8dp"/>
-
-    <!-- Filtro de Categoría -->
-    <Spinner
-        android:id="@+id/filterCategorySpinner"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="12dp"
-        android:entries="@array/categories_array" />
-
-    <!-- Lista de Tareas -->
-    <ListView
-        android:id="@+id/tasksListView"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:divider="@android:color/transparent"
-        android:dividerHeight="8dp"
-        android:paddingStart="16dp"
-        android:paddingEnd="16dp"
-        android:paddingTop="8dp"
-        android:paddingBottom="8dp"
-        android:clipToPadding="false"/>
-
-    <!-- Sección para Añadir Nueva Tarea -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="@android:color/white"
-        android:padding="16dp"
-        android:elevation="8dp">
+        android:background="#F0F0F0">
 
-        <EditText
-            android:id="@+id/newTaskEditText"
+        <!-- Barra Superior con el título -->
+        <TextView
+            android:id="@+id/titleTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Añadir nueva tarea..."
-            android:inputType="text"
-            android:padding="12dp"
-            android:background="@drawable/rounded_edittext_background"
-            android:layout_marginBottom="12dp"/>
+            android:background="#66BB6A"
+            android:gravity="center"
+            android:paddingTop="32dp"
+            android:paddingBottom="8dp"
+            android:text="Lista de Tareas"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
 
+        <!-- Filtro de Categoría -->
+        <Spinner
+            android:id="@+id/filterCategorySpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:entries="@array/categories_array"/>
+
+        <!-- Lista de Tareas -->
+        <ListView
+            android:id="@+id/tasksListView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:clipToPadding="false"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="8dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp" />
+
+        <!-- Sección para Añadir Nueva Tarea -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical">
+            android:background="@android:color/white"
+            android:elevation="8dp"
+            android:orientation="vertical"
+            android:padding="16dp">
 
-            <Spinner
-                android:id="@+id/categorySpinner"
-                android:layout_width="0dp"
+            <EditText
+                android:id="@+id/newTaskEditText"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:entries="@array/categories_array"
-                android:background="@drawable/spinner_background"
-                android:padding="8dp"
-                android:layout_marginEnd="8dp"/>
-
-            <Spinner
-                android:id="@+id/importanceSpinner"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:entries="@array/importance_array"
-                android:background="@drawable/spinner_background"
-                android:padding="8dp"
-                android:layout_marginEnd="8dp"/>
-
-            <ImageButton
-                android:id="@+id/addTaskButton"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:background="@drawable/add_button_background"
-                android:src="@drawable/ic_add"
-                android:contentDescription="@string/add_task_description"
-                android:scaleType="centerInside"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/rounded_edittext_background"
+                android:hint="Añadir nueva tarea..."
+                android:inputType="text"
                 android:padding="12dp"
-                app:tint="@android:color/white" />
+                android:textColor="@android:color/black"
+                android:textColorHint="@color/black" />
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/categorySpinner"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/spinner_background"
+                    android:entries="@array/categories_array"
+                    android:padding="8dp" />
+
+                <Spinner
+                    android:id="@+id/importanceSpinner"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/spinner_background"
+                    android:entries="@array/importance_array"
+                    android:padding="8dp" />
+
+                <ImageButton
+                    android:id="@+id/addDueDateButton"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/add_button_background"
+                    android:contentDescription="Seleccionar fecha"
+                    android:padding="12dp"
+                    android:scaleType="centerInside"
+                    android:src="@android:drawable/ic_menu_my_calendar"
+                    app:tint="@android:color/white" />
+
+                <ImageButton
+                    android:id="@+id/addTaskButton"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/add_button_background"
+                    android:contentDescription="@string/add_task_description"
+                    android:padding="12dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_add"
+                    app:tint="@android:color/white" />
+
+            </LinearLayout>
         </LinearLayout>
-    </LinearLayout>
 
-</LinearLayout>
+    </LinearLayout>
+</ScrollView>

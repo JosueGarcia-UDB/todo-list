@@ -18,7 +18,7 @@ class TaskAdapter(context: Context, tasks: List<Task>, private val listener: OnT
         fun onTaskDelete(task: Task)
         // Nueva función para notificar el cambio de estado
         fun onTaskCheckedChanged(task: Task)
-        fun onTaskEdit(task: Task) // Nuevo método para editar tarea
+        fun onTaskEdit(task: Task)
     }
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
@@ -31,12 +31,20 @@ class TaskAdapter(context: Context, tasks: List<Task>, private val listener: OnT
 
         val taskNameTextView = itemView!!.findViewById<TextView>(R.id.taskNameTextView)
         val taskDetailsTextView = itemView.findViewById<TextView>(R.id.taskDetailsTextView)
+        val taskDueDateTextView = itemView.findViewById<TextView>(R.id.taskDueDateTextView)
         val taskCheckBox = itemView.findViewById<CheckBox>(R.id.taskCheckBox)
         val deleteTaskButton = itemView.findViewById<ImageButton>(R.id.deleteTaskButton)
         val editTaskButton = itemView.findViewById<ImageButton>(R.id.editTaskButton)
 
         taskNameTextView.text = task?.name
         taskDetailsTextView.text = "${task?.category} - ${task?.importance}"
+
+        if (task?.dueDate.isNullOrEmpty()) {
+            taskDueDateTextView.visibility = View.GONE
+        } else {
+            taskDueDateTextView.visibility = View.VISIBLE
+            taskDueDateTextView.text = "Fecha de finalización: ${task?.dueDate}"
+        }
 
         // Set background color based on importance
         val importanceColor = when (task?.importance) {
