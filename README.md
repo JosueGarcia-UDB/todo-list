@@ -54,7 +54,7 @@ Antes de clonar o ejecutar el proyecto, asegúrate de tener instalado:
 
 * **Android Studio**
 * **Java JDK 17**
-* **Gradle 8.13**
+* **Gradle 8.10.2**
 * **Dispositivo físico o emulador Android (API 24 o superior)**
 
 ---
