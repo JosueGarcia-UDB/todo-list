@@ -54,7 +54,7 @@
             android:id="@+id/editTaskButton"
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:src="@android:drawable/ic_menu_edit"
+            android:src="@drawable/ic_edit_new"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:contentDescription="@string/edit_task_description" />
 
