@@ -42,7 +42,7 @@ La aplicación fue construida utilizando las siguientes tecnologías y herramien
   Para almacenamiento local ligero de las tareas.
 
 * **SQLite**
-  Alternativa para persistencia estructurada si se requiere.
+  Para persistencia estructurada.
 
 ---
 
