@@ -116,6 +116,7 @@ cd todo-list
 
 A continuación se muestra una imagen de ejemplo de la interfaz de la aplicación en funcionamiento:
 
-![Ejecución de la app](Example-todolist.png)
-
+<div align="center">
+  <img src="Example-todolist.png" alt="Ejecución de la app" width="300" style="border-radius: 12px;" />
+</div>
 ---
