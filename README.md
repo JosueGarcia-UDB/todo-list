@@ -1,5 +1,3 @@
-Perfecto. Aquí tienes el **README.md** actualizado con un apartado que muestra la ejecución del programa, incluyendo la imagen `Example-todolist.png` que mencionaste:
-
 ---
 
 # ✅ To-Do List - Aplicación de Lista de Tareas
