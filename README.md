@@ -41,18 +41,8 @@ La aplicación fue construida utilizando las siguientes tecnologías y herramien
 * **SharedPreferences**
   Para almacenamiento local ligero de las tareas.
 
-* **SQLite (opcional)**
+* **SQLite**
   Alternativa para persistencia estructurada si se requiere.
-
----
-
-## 🧪 Testing
-
-* **JUnit**
-  Framework para pruebas unitarias en Kotlin.
-
-* **Espresso**
-  Pruebas de UI automatizadas para Android.
 
 ---
 
