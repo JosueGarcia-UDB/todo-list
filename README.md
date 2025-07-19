@@ -30,7 +30,7 @@ La aplicación fue construida utilizando las siguientes tecnologías y herramien
 * **Android SDK**
   Kit de desarrollo oficial para aplicaciones Android.
 
-* **Gradle (8.13)**
+* **Gradle (8.10.2)**
   Sistema de automatización de compilación (Kotlin DSL).
 
 * **Material Design**
