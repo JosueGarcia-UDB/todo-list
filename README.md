@@ -1,6 +1,6 @@
 # To-Do List - Aplicación de Lista de Tareas
 
-## Integrantes del equipo
+## Integrantes
 
 - Jeremy Edenilson Flores Portillo - FP240479  
 - Josué Eduardo García Estrada - GE240098  
