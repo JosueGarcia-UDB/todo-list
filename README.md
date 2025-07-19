@@ -115,8 +115,7 @@ cd todo-list
 ## 📸 Ejecución de la Aplicación
 
 A continuación se muestra una imagen de ejemplo de la interfaz de la aplicación en funcionamiento:
-
+<br>
 <div align="center">
   <img src="Example-todolist.png" alt="Ejecución de la app" width="300" style="border-radius: 12px;" />
 </div>
----
