@@ -1,60 +1,123 @@
-# To-Do List - Aplicación de Lista de Tareas
-
-Aplicación Android desarrollada en Kotlin para gestionar tareas personales de forma simple y eficiente. Permite crear, editar y eliminar tareas, utilizando persistencia de datos local.
-
-## Integrantes
-
-- Jeremy Edenilson Flores Portillo - FP240479  
-- Josué Eduardo García Estrada - GE240098  
-- Edgar Josué Gómez Meléndez - GM240279  
-- Oscar Daniel Soto Jovel - SJ241841  
+Perfecto. Aquí tienes el **README.md** actualizado con un apartado que muestra la ejecución del programa, incluyendo la imagen `Example-todolist.png` que mencionaste:
 
 ---
 
-## Cómo ejecutar el proyecto
+# ✅ To-Do List - Aplicación de Lista de Tareas
 
-### Requisitos previos
+Este proyecto es una aplicación móvil desarrollada en **Kotlin** para dispositivos Android. Permite a los usuarios gestionar tareas personales de manera sencilla y eficiente, incluyendo funciones como crear, editar, eliminar y persistir tareas entre sesiones.
+Tiene como finalidad facilitar la organización personal diaria a través de una interfaz intuitiva y moderna.
 
-- Android Studio
-- JDK 17
-- Gradle 8.13
-- Dispositivo físico o emulador Android (API 24+)
+---
 
-### Pasos
+# 🧑‍💻 Integrantes
 
-1. Clona el repositorio:
-   ```bash
-   git clone https://github.com/JosueGarcia-UDB/todo-list.git
-   cd todo-list
+| Nombre de Integrante             | Carnet   |
+| -------------------------------- | -------- |
+| Jeremy Edenilson Flores Portillo | FP240479 |
+| Josué Eduardo García Estrada     | GE240098 |
+| Edgar Josué Gómez Meléndez       | GM240279 |
+| Oscar Daniel Soto Jovel          | SJ241841 |
 
-2.Abre el proyecto en Android Studio:
+---
 
-Archivo > Abrir > Selecciona la carpeta del proyecto.
+## 🚀 Tecnologías Utilizadas
 
-3.Espera a que Android Studio sincronice el proyecto con Gradle.
+La aplicación fue construida utilizando las siguientes tecnologías y herramientas:
 
-4.Ejecuta la aplicación:
+### 📱 Android
 
-Usa el botón ▶️ en Android Studio para compilar y ejecutar en el emulador o dispositivo conectado.
+* **Kotlin**
+  Lenguaje de programación principal de la aplicación.
 
-### Funcionalidades principales
-- Añadir tareas
+* **Android SDK**
+  Kit de desarrollo oficial para aplicaciones Android.
 
-- Editar tareas
+* **Gradle (8.13)**
+  Sistema de automatización de compilación (Kotlin DSL).
 
-- Eliminar tareas
+* **Material Design**
+  Estándar de diseño de interfaz moderna para Android.
 
-- Persistencia de tareas entre sesiones
+### 💾 Persistencia
 
-- Interfaz amigable basada en Material Design
+* **SharedPreferences**
+  Para almacenamiento local ligero de las tareas.
 
-### Tecnologías utilizadas
-- Lenguaje: Kotlin
+* **SQLite (opcional)**
+  Alternativa para persistencia estructurada si se requiere.
 
-- Framework: Android SDK
+---
 
-- Gestor de dependencias: Gradle (KTS)
+## 🧪 Testing
 
-- UI: XML + Material Design
+* **JUnit**
+  Framework para pruebas unitarias en Kotlin.
 
-- Persistencia: SharedPreferences o SQLite (según implementación)
+* **Espresso**
+  Pruebas de UI automatizadas para Android.
+
+---
+
+# 📲 ¿Cómo ejecutar el proyecto?
+
+## ✅ Requisitos Previos
+
+Antes de clonar o ejecutar el proyecto, asegúrate de tener instalado:
+
+* **Android Studio**
+* **Java JDK 17**
+* **Gradle 8.13**
+* **Dispositivo físico o emulador Android (API 24 o superior)**
+
+---
+
+## ⚙️ Instalación Paso a Paso
+
+### 1. Clonar el Repositorio
+
+```bash
+git clone https://github.com/JosueGarcia-UDB/todo-list.git
+cd todo-list
+```
+
+### 2. Abrir el Proyecto en Android Studio
+
+* Ir a: `Archivo > Abrir`
+* Seleccionar la carpeta del proyecto
+
+### 3. Sincronizar el Proyecto
+
+* Esperar a que Android Studio sincronice automáticamente con Gradle.
+
+### 4. Ejecutar la Aplicación
+
+* Usar el botón ▶️ en Android Studio para compilar y correr la app en un emulador o dispositivo físico conectado.
+
+---
+
+## 📝 Funcionalidades Principales
+
+* ➕ **Añadir tareas**
+  Crear nuevas tareas con título y descripción.
+
+* ✏️ **Editar tareas**
+  Modificar tareas existentes fácilmente.
+
+* 🗑️ **Eliminar tareas**
+  Borrar tareas una vez completadas o innecesarias.
+
+* 💾 **Persistencia local**
+  Guarda automáticamente las tareas entre sesiones.
+
+* 🎨 **Interfaz moderna**
+  Basada en principios de Material Design para mejor experiencia de usuario.
+
+---
+
+## 📸 Ejecución de la Aplicación
+
+A continuación se muestra una imagen de ejemplo de la interfaz de la aplicación en funcionamiento:
+
+![Ejecución de la app](Example-todolist.png)
+
+---
