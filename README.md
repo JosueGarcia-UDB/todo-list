@@ -1,4 +1,4 @@
-# To-Do List - Aplicación de Lista de Tareas en Android
+# To-Do List - Aplicación de Lista de Tareas
 
 ## Integrantes del equipo
 
